@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <meta name="theme-color" content="#0a0a0a">
+  <title>ATLAS — Custom</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand">ATLAS</div>
+    <div class="step" id="stepLabel">01 / 03</div>
+  </header>
+
+  <main>
+    <section class="screen active" id="screen1">
+      <div class="hero">
+        <p class="eyebrow">ATLAS CUSTOM</p>
+        <h1>Crée ton<br><span>T-shirt.</span></h1>
+        <p class="intro">Choisis ton modèle puis place le logo Atlas exactement où tu le veux.</p>
+      </div>
+
+      <div class="products">
+        <button class="product-card" data-color="white">
+          <div class="shirt-thumb white-thumb"><img src="assets/shirt-white.jpg" alt="T-shirt blanc"></div>
+          <div class="product-info"><strong>ATLAS WHITE</strong><span>25 € · Classique</span></div>
+          <span class="arrow">↗</span>
+        </button>
+
+        <button class="product-card" data-color="black">
+          <div class="shirt-thumb black-thumb"><img src="assets/shirt-black.jpg" alt="T-shirt noir"></div>
+          <div class="product-info"><strong>ATLAS BLACK</strong><span>25 € · Classique</span></div>
+          <span class="arrow">↗</span>
+        </button>
+      </div>
+    </section>
+
+    <section class="screen" id="screen2">
+      <div class="custom-head">
+        <button class="back" id="backBtn">← Retour</button>
+        <div>
+          <p class="eyebrow">PERSONNALISATION</p>
+          <h2 id="modelTitle">ATLAS WHITE</h2>
+        </div>
+        <button class="reset" id="resetBtn">Réinitialiser</button>
+      </div>
+
+      <div class="stage-wrap">
+        <div class="stage" id="stage">
+          <img id="shirtImage" class="shirt-image" src="assets/shirt-white.jpg" alt="T-shirt à personnaliser">
+          <img id="logo" class="logo" src="assets/atlas-logo-white.png" alt="Logo Atlas">
+          <div class="hint" id="hint">TOUCHE ET DÉPLACE LE LOGO</div>
+        </div>
+      </div>
+
+      <div class="controls">
+        <div class="control-row">
+          <div>
+            <label>Taille du logo</label>
+            <div class="range-line">
+              <button class="round" id="minus">−</button>
+              <input id="logoSize" type="range" min="8" max="34" value="18">
+              <button class="round" id="plus">+</button>
+            </div>
+          </div>
+          <div class="value" id="sizeValue">18%</div>
+        </div>
+
+        <div class="control">
+          <label>Taille du T-shirt</label>
+          <div class="sizes">
+            <button class="size active" data-size="S">S</button>
+            <button class="size" data-size="M">M</button>
+            <button class="size" data-size="L">L</button>
+            <button class="size" data-size="XL">XL</button>
+          </div>
+        </div>
+
+        <button class="primary" id="validateBtn">Valider la personnalisation <span>→</span></button>
+      </div>
+    </section>
+
+    <section class="screen" id="screen3">
+      <div class="summary-head">
+        <p class="eyebrow">RÉCAPITULATIF</p>
+        <h1>Ton Atlas<br><span>est prêt.</span></h1>
+      </div>
+
+      <div class="summary-card">
+        <div class="mini-stage">
+          <img id="summaryShirt" src="assets/shirt-white.jpg" alt="">
+          <img id="summaryLogo" src="assets/atlas-logo-white.png" alt="">
+        </div>
+        <div class="summary-info">
+          <div><span>Modèle</span><strong id="summaryModel">ATLAS WHITE</strong></div>
+          <div><span>Taille</span><strong id="summarySize">S</strong></div>
+          <div><span>Logo</span><strong>Position personnalisée</strong></div>
+          <div class="total"><span>Total</span><strong>25 €</strong></div>
+        </div>
+      </div>
+
+      <button class="primary" id="saveBtn">Sauvegarder ma création <span>→</span></button>
+      <button class="secondary" id="editBtn">← Modifier</button>
+      <p class="saved" id="savedMessage"></p>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
